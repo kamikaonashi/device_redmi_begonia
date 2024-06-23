@@ -40,7 +40,7 @@ TARGET_SCREEN_WIDTH := 1080
 TARGET_BOOT_ANIMATION_RES := 1080
 
 # Official-ify
-VOLTAGE_BUILD_TYPE := OFFICIAL
+VOLTAGE_BUILD_TYPE := UNOFFICIAL
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := begonia
