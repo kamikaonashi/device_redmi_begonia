@@ -17,27 +17,14 @@ $(call inherit-product, device/redmi/begonia/device.mk)
 
 # Inherit some common VoltageOS stuff
 $(call inherit-product, vendor/voltage/config/common_full_phone.mk)
-TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_DOESNT_LIKE_FLIPENDO := true
-TARGET_ENABLE_BLUR := true
 
 # Inherit some extras stuff
 $(call inherit-product-if-exists, vendor/extras/extras.mk)
-$(call inherit-product-if-exists, vendor/MiuiCameraLeica/config.mk)
 $(call inherit-product-if-exists, hardware/dolby/dolby.mk)
+$(call inherit-product-if-exists, vendor/MiuiCameraLeica/config.mk)
 
-# Fix uses broken libraries
-RELAX_USES_LIBRARY_CHECK := true
-PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
-
-# Screen density
-PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-
-# Boot Animation
-TARGET_SCREEN_HEIGHT := 2340
-TARGET_SCREEN_WIDTH := 1080
-TARGET_BOOT_ANIMATION_RES := 1080
+# Boot animation
+TARGET_BOOT_ANIMATION_RES := 1920
 
 # Official-ify
 VOLTAGE_BUILD_TYPE := UNOFFICIAL
