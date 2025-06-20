@@ -8,4 +8,10 @@
         android:summary="@string/charge_bypass_summary"
         android:icon="@drawable/ic_fast_charge" />
 
+    <Preference
+        android:key="core_control"
+        android:title="@string/core_control_title"
+        android:summary="@string/core_control_summary"
+        android:icon="@drawable/ic_cpu" />
+
 </PreferenceScreen>

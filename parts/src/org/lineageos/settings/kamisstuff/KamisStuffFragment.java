@@ -22,10 +22,12 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceFragment;
 import org.lineageos.settings.R;
 import org.lineageos.settings.charge.ChargeActivity;
+import org.lineageos.settings.corecontrol.CoreControlActivity;
 
 public class KamisStuffFragment extends PreferenceFragment {
 
     private static final String KEY_BYPASS_CHARGE = "bypass_charge";
+    private static final String KEY_CORE_CONTROL = "core_control";
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -36,6 +38,16 @@ public class KamisStuffFragment extends PreferenceFragment {
         if (bypassChargePref != null) {
             bypassChargePref.setOnPreferenceClickListener(preference -> {
                 Intent intent = new Intent(getActivity(), ChargeActivity.class);
+                startActivity(intent);
+                return true;
+            });
+        }
+        
+        // Core Control preference
+        Preference coreControlPref = findPreference(KEY_CORE_CONTROL);
+        if (coreControlPref != null) {
+            coreControlPref.setOnPreferenceClickListener(preference -> {
+                Intent intent = new Intent(getActivity(), CoreControlActivity.class);
                 startActivity(intent);
                 return true;
             });

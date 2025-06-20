@@ -18,3 +18,6 @@ type sysfs_mtk_gpufreq, fs_type, sysfs_type;
 
 # PPS
 type pps_socket, file_type;
+
+# Core Control
+type vendor_sysfs_corecontrol, fs_type, sysfs_type;

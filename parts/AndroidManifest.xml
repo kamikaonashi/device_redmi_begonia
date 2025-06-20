@@ -64,6 +64,11 @@
             android:exported="false" />
 
         <activity
+            android:name=".corecontrol.CoreControlActivity"
+            android:label="@string/core_control_title"
+            android:exported="false" />
+
+        <activity
             android:name=".thermal.ThermalActivity"
             android:label="@string/thermal_title"
             android:exported="true">
