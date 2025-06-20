@@ -4,3 +4,7 @@ allow system_app sysfs_zram:file r_file_perms;
 # FM Radio
 get_prop(system_app, wmt_prop)
 get_prop(system_app, mtk_default_prop)
+
+# Charge Bypass
+allow system_app sysfs_battery_supply:dir search;
+allow system_app sysfs_battery_supply:file { getattr open read write };

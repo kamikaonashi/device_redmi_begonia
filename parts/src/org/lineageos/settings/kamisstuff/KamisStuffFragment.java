@@ -21,11 +21,24 @@ import android.os.Bundle;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragment;
 import org.lineageos.settings.R;
+import org.lineageos.settings.charge.ChargeActivity;
 
 public class KamisStuffFragment extends PreferenceFragment {
+
+    private static final String KEY_BYPASS_CHARGE = "bypass_charge";
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.kamis_stuff_settings, rootKey);
+
+        // Charge preference
+        Preference bypassChargePref = findPreference(KEY_BYPASS_CHARGE);
+        if (bypassChargePref != null) {
+            bypassChargePref.setOnPreferenceClickListener(preference -> {
+                Intent intent = new Intent(getActivity(), ChargeActivity.class);
+                startActivity(intent);
+                return true;
+            });
+        }
     }
 }
