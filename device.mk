@@ -6,6 +6,9 @@
 
 DEVICE_PATH := device/redmi/begonia
 
+# Call the ViperFX Config
+$(call inherit-product-if-exists, packages/apps/ViPER4AndroidFX/config.mk)
+
 # Installs gsi keys into ramdisk, to boot a developer GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
